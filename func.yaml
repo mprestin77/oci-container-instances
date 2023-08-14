@@ -1,0 +1,19 @@
+schema_version: 20180708
+name: create-container-instance
+version: 0.0.57
+runtime: python
+build_image: fnproject/python:3.9-dev
+run_image: fnproject/python:3.9
+entrypoint: /python/bin/fdk /function/func.py handler
+memory: 256
+timeout: 300
+config:
+  AVAILABILITY_DOMAIN: ZyrR:US-ASHBURN-AD-1
+  COMPARTMENT_ID: ocid1.compartment.oc1..aaaaaaaak4br2cpp6gggpquw6omq7ocf2kinkz3qi5oyjbispxped525cdga
+  CONFIG_SHAPE_MEMORY: "16"
+  CONFIG_SHAPE_OCPUS: "2"
+  IMAGE_URL: iad.ocir.io/axhlyht8myu1/mikep/transcoder:latest
+  OUTPUT_BUCKET: dst_bucket
+  SHAPE: CI.Standard.E4.Flex
+  STREAMING_PROTOCOL: HLS
+  SUBNET_ID: ocid1.subnet.oc1.iad.aaaaaaaays5atevdbhaqpcssqsgysqyehwpaqyhhlg7qsvz72bxojgrvktma
