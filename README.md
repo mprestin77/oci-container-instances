@@ -30,7 +30,7 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 
 **The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
 
-Create an [Event Rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm#top) that fires when a new file is uploaded to the object storage bucket:
+Create an [Event Rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm#top) that fires when a new file is uploaded to the object storage bucket. Here is an example of the event rule:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/58272778-6ad1-44f1-9980-9f7b8a6d8c35)
 
