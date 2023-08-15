@@ -32,5 +32,6 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 
 Create an [Event Rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm#top) that fires when a new file is uploaded to the object storage bucket:
 
-![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/2df0f48e-abad-4e9b-9639-24a5988ae0ef)
+![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/58272778-6ad1-44f1-9980-9f7b8a6d8c35)
+
 
