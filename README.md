@@ -66,7 +66,8 @@ For more details see [Pushing Images Using the Docker CLI](https://docs.oracle.c
 
 # Create Network Infrastracture for OCI Functions and Container Instances
 
-Create a VCN and subnet which will be used by OCI function and container instance services. Note that a public subnet requires an internet gateway in the VCN, and a private subnet requires a service gateway in the VCN. For more inormation see
+Create a VCN and subnet which will be used by OCI function and container instance services. Note that a public subnet requires an internet gateway in the VCN, and a private subnet requires a service gateway in the VCN. For more inormation see:
+
 [Create VCN and subnet for OCI functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartocicomputeinstance.htm#)
 
 [Create VCN and subnet for OCI container instances](https://docs.oracle.com/en-us/iaas/Content/container-instances/creating-a-container-instance.htm#)
