@@ -82,8 +82,8 @@ After that go to the parent directory oci-container-instance Edit func.yaml file
 ```
   AVAILABILITY_DOMAIN: 
   COMPARTMENT_ID: 
-  CONFIG_SHAPE_MEMORY: "16"
-  CONFIG_SHAPE_OCPUS: "2"
+  CONFIG_SHAPE_MEMORY: 
+  CONFIG_SHAPE_OCPUS: 
   IMAGE_URL: 
   OUTPUT_BUCKET: 
   SHAPE: 
