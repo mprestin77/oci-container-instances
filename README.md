@@ -74,7 +74,7 @@ Create a VCN and subnet which will be used by OCI function and container instanc
 
 # Create OCI Function Application
 
-Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) attached to the subnet that OCI container instances will be using.
+Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) attached to the subnet that OCI function and container instance services will be using.
 
 # Create OCI Event Rule
 
