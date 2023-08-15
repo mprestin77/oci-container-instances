@@ -1,4 +1,4 @@
-# oci-container-instances
+# OCI Container Instances
 This repo shows an example how to spin up an OCI container instance when a new media file is uploaded to OCI Object Storage bucket. When a new file is uploaded to the object storage bucket, it emits an event that executes a serverless function. The function creates a serveless container instance that starts a transcoding container. The transcoding job uses ffmpeg open source software to transcode to multiple resolutions and different bitrates. It supports both HLS and DASH streaming protocols. On completion it creates a master manifest file, uploads all the files to the destination bucket. In addition it creates a thumbnail of the media content and uploads it to the destination bucket. 
 
 # Data Flow
