@@ -46,7 +46,7 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 
 Log in to Oracle Cloud Infrastructure Registry by entering:
 ```
-docker login \<region-key\>.ocir.io
+docker login <region-key>.ocir.io
 ```
 where <region-key> is the key for the Oracle Cloud Infrastructure Registry region you're using. See [Availability by Region](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) topic in OCI Registry documentation.
 
