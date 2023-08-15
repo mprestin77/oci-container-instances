@@ -27,17 +27,17 @@ At a minimum, the following policies are required:
   
 # Create a Container Image in OCI registry
 In a terminal window on a client machine running Docker, clone this github repo
-
+```
 git clone https://github.com/mprestin77/oci-container-instances/edit/main
-
+```
 Go to oci-container-instance/build directory and create a local container image by running
-
+```
 docker build -t transcoder . --no-cache
-
+```
 Check that the container image was created on the local machine:
-
+```
 docker images
-
+```
 In the output of this command you should see "transcoder:latest" image listed.
 
 Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and save it in your records. After that create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
@@ -45,9 +45,9 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 **The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
 
 Log in to Oracle Cloud Infrastructure Registry by entering:
-
+```
 docker login \<region-key\>.ocir.io
-
+```
 where <region-key> is the key for the Oracle Cloud Infrastructure Registry region you're using. See [Availability by Region](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) topic in OCI Registry documentation.
 
 When prompted for username, enter your username in the format \<tenancy-namespace\>/\<username\>. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/\<username\>.
@@ -55,13 +55,13 @@ When prompted for username, enter your username in the format \<tenancy-namespac
 When prompted for password, enter the auth token you copied earlier as the password.
 
 Create a tag to the image that you're going to push to OCI Registry by entering: 
-
+```
 docker tag transcoder:latest \<region-key\>.ocir.io/\<tenancy-namespace\>/\<repo-name\>/transcoder:latest
-
+```
 Push the container image to OCI registry
-
+```
 docker push <region-key>.ocir.io/\<tenancy-namespace\>/\<repo-name\>/transcoder:latest
-
+```
 For more details see [Pushing Images Using the Docker CLI](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm)
 
 # Create Network Infrastracture for OCI Functions and Container Instances
