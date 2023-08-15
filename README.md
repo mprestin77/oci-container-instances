@@ -50,17 +50,17 @@ docker login <region-key>.ocir.io
 ```
 where <region-key> is the key for the Oracle Cloud Infrastructure Registry region you're using. See [Availability by Region](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) topic in OCI Registry documentation.
 
-When prompted for username, enter your username in the format \<tenancy-namespace\>/\<username\>. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/\<username\>.
+When prompted for username, enter your username in the format \<tenancy-namespace\>\<username\>. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/\<username\>.
 
 When prompted for password, enter the auth token you copied earlier as the password.
 
 Create a tag to the image that you're going to push to OCI Registry by entering: 
 ```
-docker tag transcoder:latest \<region-key\>.ocir.io/\<tenancy-namespace\>/\<repo-name\>/transcoder:latest
+docker tag transcoder:latest <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
 ```
 Push the container image to OCI registry
 ```
-docker push <region-key>.ocir.io/\<tenancy-namespace\>/\<repo-name\>/transcoder:latest
+docker push <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
 ```
 For more details see [Pushing Images Using the Docker CLI](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm)
 
