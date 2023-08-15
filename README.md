@@ -56,7 +56,7 @@ When prompted for password, enter the auth token you copied earlier as the passw
 
 Create a tag to the image that you're going to push to OCI Registry by entering: 
 
-docker tag transcoder:latest <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
+docker tag transcoder:latest <region-key>.ocir.io/\<tenancy-namespace>/<repo-name>/transcoder:latest
 
 Push the container image to OCI registry
 
