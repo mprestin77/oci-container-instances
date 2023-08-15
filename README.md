@@ -13,6 +13,7 @@ OCI serverless function is a light-weight resource with a limited execution time
 Both OCI function and container instance services use AIM resource principal to authenticate and access OCI resources.  Create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) matching OCI function and container instance resource types in a given compartment. Use the following matching rule:
 
   ALL {resource.type='computecontainerinstance', resource.compartment.id = 'compartment-id'}
+
   ALL {resource.type = 'fnfunc',resource.compartment.id = 'compartment-id'}
 
 where compartment-id is OCID of your compartment. You can get compartment OCID in OCI console from Identity & Security. Under Identity, click Compartments. A compartment hierarchy in your tenancy is displayed. Find your compartment and copy its OCID.
