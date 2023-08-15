@@ -10,7 +10,7 @@ OCI serverless function is a light weight resource with a limited execution time
 
 # Pre-Requisites
 
-Both OCI function and OCI container instance require usage of [Resource Principals](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm) for container execution.  You should create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) for the compartment where you are deploying your OKE cluster. When creating a dynamic group to match all compute instances in the compartment you can use the following matching rule:
+Both OCI function and container instance use a resource principal to authenticate and access Oracle Cloud Infrastructure resources[Resource Principals](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm).  You should create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) for the compartment where you are deploying your OKE cluster. When creating a dynamic group to match all compute instances in the compartment you can use the following matching rule:
 
   instance.compartment.id = 'compartment-id'
 
