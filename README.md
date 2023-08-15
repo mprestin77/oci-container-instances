@@ -34,7 +34,7 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 
 # Create OCI Function Application
 
-Install [OCI fn Application] (https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) and 
+Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) attached to the subnet that OCI container instances will be using.
 
 # Create OCI Event Rule
 
