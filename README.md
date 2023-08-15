@@ -30,8 +30,6 @@ In a terminal window on a client machine running Docker, clone this github repo
 
 git clone https://github.com/mprestin77/oci-container-instances/edit/main
 
-Run "docker" command to check that Docker is installed and running. If you are getting an error message indicating that Docker is not installed see [Docker documentation for your platform](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartocicomputeinstance.htm#).
-
 Go to oci-container-instance/build directory and create a local container image by running
 
 docker build -t transcoder . --no-cache
@@ -40,12 +38,7 @@ Check that the container image was successfully:
 
 docker images
 
-In the output of this command you should see "transcoder:latest" image
-
-Tag this image to 
-
-For more details see [Pushing Images Using the Docker CLI](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registrypushingimagesusingthedockercli.htm)
-
+In the output of this command you should see "transcoder:latest" image listed.
 
 Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and save it in your records. After that create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
 
