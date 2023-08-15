@@ -10,11 +10,12 @@ OCI serverless function is a light-weight resource with a limited execution time
 
 # Pre-Requisites
 
-Both OCI function and container instance use a resource principal to authenticate and access Oracle Cloud Infrastructure resources [Resource Principals](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm).  You should create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) for the compartment where you are deploying your OKE cluster. When creating a dynamic group to match all compute instances in the compartment you can use the following matching rule:
+Both OCI function and container instance services use AIM resource principal to authenticate and access Oracle Cloud Infrastructure resources [Resource Principals](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm).  You should create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) for the compartment where you are deploying the resources. When creating a dynamic group to match OCI functions and container instances in a given compartment you can use the following matching rule:
 
-  instance.compartment.id = 'compartment-id'
+  ALL {resource.type='computecontainerinstance', resource.compartment.id = 'compartment-id'}
+  ALL {resource.type = 'fnfunc',resource.compartment.id = 'compartment-id'}
 
-where compartment-id is ID of your compartment. You can get compartment OCID in OCI console from Identity & Security. Under Identity, click Compartments. A compartment hierarchy in your tenancy is displayed. Find your compartment and copy its OCID.
+where compartment-id is OCID of your compartment. You can get compartment OCID in OCI console from Identity & Security. Under Identity, click Compartments. A compartment hierarchy in your tenancy is displayed. Find your compartment and copy its OCID.
 
 After creating the dynamic group, you should set specific [IAM policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/policyreference.htm) for OCI services that can be used by the Dynamic Group. 
 
@@ -22,21 +23,12 @@ After creating the dynamic group, you should set specific [IAM policies](https:/
 
 At a minimum, the following policies are required:
 
-    Allow dynamic-group <dynamic group name> to manage cluster-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic group name> to manage secret-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic group name> to manage vaults in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage streams in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage repos in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage object-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage instance-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage virtual-network-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage cluster-node-pools in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage vnics in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage mysql-family in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to inspect compartments in compartment id <compartment OCID>
-    Allow dynamic-group <dynamic-group-name> to manage cloudevents-rules in compartment id <compartment OCID>
+    Allow dynamic-group <dynamic group name> to manage object-family in compartment id <compartment OCID>
+    Allow dynamic-group <dynamic group name> to manage compute-container-family in compartment id <compartment OCID>
+    Allow dynamic-group <dynamic group name> to read repos in tenancy
+  
 
-Also required prior to deployment are an [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm), [OCI Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm), [Auth Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password), and a [Vault Secret](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingsecrets.htm) which contains the Auth Token.  
+Prior to deployment create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
 
 **The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
 
