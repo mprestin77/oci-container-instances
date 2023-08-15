@@ -19,8 +19,6 @@ where compartment-id is OCID of your compartment. You can get compartment OCID i
 
 After creating the dynamic group, you should set specific [IAM policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/policyreference.htm) for OCI services that can be used by the Dynamic Group. 
 
-**Due to enforcement of [OSMS](https://docs.oracle.com/en-us/iaas/os-management/osms/osms-getstarted.htm) for compute resources created using an `manage all-resources` policy, you need to specify each service in a separate policy syntax**
-
 At a minimum, the following policies are required:
 
     Allow dynamic-group <dynamic group name> to manage object-family in compartment id <compartment OCID>
@@ -28,9 +26,11 @@ At a minimum, the following policies are required:
     Allow dynamic-group <dynamic group name> to read repos in tenancy
   
 
-Prior to deployment create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
+Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
 
 **The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
+
+Create an [Event Rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm#top) that fires when a new file is uploaded to the object storage bucket:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/2df0f48e-abad-4e9b-9639-24a5988ae0ef)
 
