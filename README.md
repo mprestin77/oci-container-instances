@@ -116,6 +116,7 @@ It triggers execution of "create-container-instance" function that you can see i
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/676cf74f-c537-4895-ac17-253aa9b366ea)
 
 This function spins up a new "transcode" container instance that you can see in OCI Container Instance metrics:
+
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fec57c25-481b-4b41-87c0-42f2940046e1)
 
 The spun off container downloads the media file from the object storage bucket, transcodes the file to 3 different resolutions and bitrates
