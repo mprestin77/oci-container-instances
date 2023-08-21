@@ -26,11 +26,11 @@ At a minimum, the following policies are required:
     Allow dynamic-group <dynamic group name> to read repos in tenancy
   
 # Create a Container Image in OCI registry
-In a terminal window on a client machine running Docker, clone this github repo
+In a terminal window on a client machine running Docker, clone this github repo:
 ```
 git clone https://github.com/mprestin77/oci-container-instances/edit/main
 ```
-Go to oci-container-instance/build directory and create a local container image by running
+Go to oci-container-instance/build directory and create a local container image by running:
 ```
 docker build -t transcoder . --no-cache
 ```
