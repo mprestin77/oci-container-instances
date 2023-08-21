@@ -48,7 +48,7 @@ Log in to Oracle Cloud Infrastructure Registry:
 ```
 docker login <region-key>.ocir.io
 ```
-where <region-key> is the key for the Oracle Cloud Infrastructure Registry region you're using. See [Availability by Region](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) topic in OCI Registry documentation.
+where \<region-key\> is the key for the Oracle Cloud Infrastructure Registry region you're using. See [Availability by Region](https://docs.cloud.oracle.com/iaas/Content/Registry/Concepts/registryprerequisites.htm#Availab) topic in OCI Registry documentation.
 
 When prompted for username, enter your username in the format \<tenancy-namespace\>\<username\>. If your tenancy is federated with Oracle Identity Cloud Service, use the format <tenancy-namespace>/oracleidentitycloudservice/\<username\>.
 
