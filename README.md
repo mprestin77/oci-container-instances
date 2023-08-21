@@ -10,7 +10,7 @@ OCI serverless function is a light-weight resource with a limited execution time
 
 # Pre-Requisites
 
-Both OCI function and container instance services use AIM resource principal to authenticate and access OCI resources.  Create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) matching OCI function and container instance resource types in a given compartment. Use the following matching rule:}
+Both OCI function and container instance services use AIM resource principal to authenticate and access OCI resources.  Create a [dynamic group](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingdynamicgroups.htm) matching OCI function and container instance resource types in a given compartment. Use the following matching rule:
 ```
 ALL {resource.type='computecontainerinstance', resource.compartment.id = 'compartment-id'}
 ALL {resource.type = 'fnfunc',resource.compartment.id = 'compartment-id'}
