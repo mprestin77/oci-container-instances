@@ -90,9 +90,8 @@ After that go to the parent directory oci-container-instance and edit func.yaml 
   STREAMING_PROTOCOL: <HLS or DASH>
   SUBNET_ID: <subnet OCID>
 ```
-and save the file.
 
-Deploy create-container-instance function: 
+Save the file and deploy "create-container-instance" function: 
 ```
 fn deploy --app process-new-file
 ```
