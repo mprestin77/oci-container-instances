@@ -122,11 +122,17 @@ This function spins up a new "transcode" container instance that you can see in 
 The spun off container downloads the media file from the object storage bucket, transcodes the file to 3 different resolutions and bitrates
 
 1080p 5Mbit/s
+
 720p  3Mbit/s
+
 360p  1Mbit/s
 
-and uploads the playlist files to the destination bucket. 
+It creates a new folder in the output object storage bucket with the name of the input file, and ploads the playlist files to this folder. He is an example:
 
+![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/bde73d2b-dc64-45cb-942a-07007966cd3a)
+
+At the end it creates a thumbnail of the media content and uploads it to "thumbnails" folder of the destination bucket.
+ 
 For troubleshooting purpose you can turn on logging in OCI fn application. Once the container instance is spun off you can view logs of the transcoding container while the container is running. 
 
 
