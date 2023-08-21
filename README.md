@@ -6,7 +6,7 @@ The data flow is illustrated in the picture below:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/028cb8b2-c1b3-49df-a87a-d5a79e0c9536)
 
-OCI serverless function is a light-weight resource with a limited execution time. Transcoding of large media files can be quite time consuming and require more disk space than OCI functions support. Therefore, the role of the function is to spin up a serveless container instance that can efficiently execute the transcoding job. 
+OCI serverless function is a light-weight resource with a limited execution time. Transcoding of large media files can be quite time consuming and requires more disk space than OCI functions support. Therefore, the role of the function is to spin up a serveless container instance that can efficiently execute the transcoding job. 
 
 # Pre-Requisites
 
