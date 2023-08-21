@@ -80,15 +80,15 @@ In the terminal window on the client machine install [fn project CLI](https://do
 
 After that go to the parent directory oci-container-instance and edit func.yaml file.  Set the values of the environment variables:
 ```
-  AVAILABILITY_DOMAIN: 
-  COMPARTMENT_ID: 
-  CONFIG_SHAPE_MEMORY: 
-  CONFIG_SHAPE_OCPUS: 
-  IMAGE_URL: 
-  OUTPUT_BUCKET: 
-  SHAPE: 
-  STREAMING_PROTOCOL: 
-  SUBNET_ID: 
+  AVAILABILITY_DOMAIN: <name of the availability domain>
+  COMPARTMENT_ID: <compartment OCID>
+  SHAPE: <container instance shape, currently supported shapes are CI.Standard.E4.Flex and CI.Standard.E3.Flex>
+  CONFIG_SHAPE_MEMORY: <amount of memory (GB)> 
+  CONFIG_SHAPE_OCPUS: <number of OCPUs>
+  IMAGE_URL: <URL the container image in OCI registry>
+  OUTPUT_BUCKET: <name of the output object storage bucket where the transcoded files will be uploaded>
+  STREAMING_PROTOCOL: <HLS or DASH>
+  SUBNET_ID: <subnet OCID>
 ```
 and save the file.
 
