@@ -92,7 +92,7 @@ After that go to the parent directory oci-container-instance and edit func.yaml 
 ```
 and save the file.
 
-Deploy create-container-instance function 
+Deploy create-container-instance function: 
 ```
 fn deploy --app process-new-file
 ```
