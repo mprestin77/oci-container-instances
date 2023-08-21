@@ -126,7 +126,7 @@ The spun off container downloads the media file from the object storage bucket a
 
 360p  1Mbit/s
 
-It creates a new folder in the output object storage bucket with the name of the input file, and uploads the playlist files for each stream (resolution and bitrate) to this folder. Here is an example:
+It creates a new folder in the output object storage bucket with the name of the input file, and uploads the playlist files for each stream (resolution & bitrate) to this folder. Here is an example:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/bde73d2b-dc64-45cb-942a-07007966cd3a)
 
