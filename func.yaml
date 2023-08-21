@@ -10,10 +10,10 @@ timeout: 300
 config:
   AVAILABILITY_DOMAIN: ZyrR:US-ASHBURN-AD-1
   COMPARTMENT_ID: ocid1.compartment.oc1..aaaaaaaak4br2cpp6gggpquw6omq7ocf2kinkz3qi5oyjbispxped525cdga
+  SHAPE: CI.Standard.E4.Flex
   CONFIG_SHAPE_MEMORY: "16"
   CONFIG_SHAPE_OCPUS: "2"
   IMAGE_URL: iad.ocir.io/axhlyht8myu1/mikep/transcoder:latest
   OUTPUT_BUCKET: dst_bucket
-  SHAPE: CI.Standard.E4.Flex
   STREAMING_PROTOCOL: HLS
   SUBNET_ID: ocid1.subnet.oc1.iad.aaaaaaaays5atevdbhaqpcssqsgysqyehwpaqyhhlg7qsvz72bxojgrvktma
