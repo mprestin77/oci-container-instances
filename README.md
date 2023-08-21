@@ -42,7 +42,7 @@ In the output of this command you should see "transcoder:latest" image listed.
 
 Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingcredentials.htm#create_swift_password) and save it in your records. After that create a repo in [OCI Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm) where the container image will be stored.
 
-**The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
+**The OCI registry must be in the tenanacy root compartment and the user account associated with the auth token will need relevant privileges for the repo**
 
 Log in to Oracle Cloud Infrastructure Registry:
 ```
