@@ -78,7 +78,7 @@ Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions
 
 In the terminal window on the client machine install [fn project CLI](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartocicomputeinstance.htm#)
 
-After that go to the parent directory oci-container-instance Edit func.yaml file.  Set the values of the environment variables:
+After that go to the parent directory oci-container-instance and edit func.yaml file.  Set the values of the environment variables:
 ```
   AVAILABILITY_DOMAIN: 
   COMPARTMENT_ID: 
