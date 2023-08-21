@@ -44,7 +44,7 @@ Create an [Authentication Token](https://docs.oracle.com/en-us/iaas/Content/Iden
 
 **The OCI registry must be in the tenanacy root and the user account associated with the auth token will need relevant privileges for the repo**
 
-Log in to Oracle Cloud Infrastructure Registry by entering:
+Log in to Oracle Cloud Infrastructure Registry:
 ```
 docker login <region-key>.ocir.io
 ```
@@ -54,7 +54,7 @@ When prompted for username, enter your username in the format \<tenancy-namespac
 
 When prompted for password, enter the auth token you copied earlier as the password.
 
-Create a tag to the image that you're going to push to OCI Registry by entering: 
+Create a tag to the image that you're going to push to OCI Registry: 
 ```
 docker tag transcoder:latest <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
 ```
