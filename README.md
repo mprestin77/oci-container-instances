@@ -85,7 +85,7 @@ After that go to the parent directory oci-container-instance and edit func.yaml 
   SHAPE: <container instance shape, currently supported shapes are CI.Standard.E4.Flex and CI.Standard.E3.Flex>
   CONFIG_SHAPE_MEMORY: <amount of memory (GB)> 
   CONFIG_SHAPE_OCPUS: <number of OCPUs>
-  IMAGE_URL: <URL the container image in OCI registry>
+  IMAGE_URL: <URL of the container image in OCI registry>
   OUTPUT_BUCKET: <name of the output object storage bucket where the transcoded files will be uploaded>
   STREAMING_PROTOCOL: <HLS or DASH>
   SUBNET_ID: <subnet OCID>
