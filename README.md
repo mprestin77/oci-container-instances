@@ -58,7 +58,7 @@ Create a tag to the image that you're going to push to OCI Registry:
 ```
 docker tag transcoder:latest <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
 ```
-Push the container image to OCI registry
+Push the container image to OCI registry:
 ```
 docker push <region-key>.ocir.io/<tenancy-namespace>/<repo-name>/transcoder:latest
 ```
