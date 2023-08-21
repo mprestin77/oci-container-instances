@@ -107,24 +107,24 @@ Input bucket must be an existing object storage bucket where the input media fil
 
 # Test the Flow
 
-Upload a new file to the input bucket. Shortly after that you should see that OCI event new-file-upload is emitted
+Upload a new file to the input bucket. Shortly after that you should see that OCI event new-file-upload is emitted. Here is a screenshot from OCI event metrics:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fd39e420-6e9e-4a07-aac0-46d4ad0a2b96)
 
-It triggers execution of create-container-instance function
+It triggers execution of "create-container-instance" function that you can see in OCI function metrics:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/676cf74f-c537-4895-ac17-253aa9b366ea)
 
-This function spins up a new transcode container instance 
+This function spins up a new "transcode" container instance that you can see in OCI Container Instance metrics:
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fec57c25-481b-4b41-87c0-42f2940046e1)
 
-The container instances downloads the media file from the object storage bucket, transcodes the file to 3 different resolutions and bitrates
+The spun off container downloads the media file from the object storage bucket, transcodes the file to 3 different resolutions and bitrates
 
 1080p 5Mbit/s
 720p  3Mbit/s
 360p  1Mbit/s
 
-and uploads the files to the destination bucket. 
+and uploads the playlist files to the destination bucket. 
 
 For troubleshooting purpose you can turn on logging in OCI fn application. Once the container instance is spun off you can view logs of the transcoding container while the container is running. 
 
