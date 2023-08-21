@@ -111,14 +111,22 @@ Upload a new file to the input bucket. Shortly after that you should see that OC
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fd39e420-6e9e-4a07-aac0-46d4ad0a2b96)
 
-and it triffers function execution
+It triggers execution of create-container-instance function
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/676cf74f-c537-4895-ac17-253aa9b366ea)
 
-
+This function spins up a new transcode container instance 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fec57c25-481b-4b41-87c0-42f2940046e1)
 
+The container instances downloads the media file from the object storage bucket, transcodes the file to 3 different resolutions and bitrates
 
+1080p 5Mbit/s
+720p  3Mbit/s
+360p  1Mbit/s
+
+and uploads the files to the destination bucket. 
+
+For troubleshooting purpose you can turn on logging in OCI fn application. Once the container instance is spun off you can view logs of the transcoding container while the container is running. 
 
 
 
