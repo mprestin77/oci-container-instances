@@ -74,7 +74,7 @@ Create a VCN with a subnet which will be used by OCI function and container inst
 
 # Create OCI Function Application
 
-Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) attached to the subnet that OCI function and container instance services will be using. In my example I called the application "process-new-file"
+Create [OCI fn Application](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartlocalhost.htm#) attached to the subnet that OCI function and container instance services will be using. In my example I called the application "process-new-file".
 
 In the terminal window on the client machine install [fn project CLI](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartocicomputeinstance.htm#)
 
