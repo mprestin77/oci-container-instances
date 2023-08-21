@@ -86,7 +86,7 @@ After that go to the parent directory oci-container-instance and edit func.yaml 
   CONFIG_SHAPE_MEMORY: <amount of memory (GB)> 
   CONFIG_SHAPE_OCPUS: <number of OCPUs>
   IMAGE_URL: <URL of the container image in OCI registry>
-  OUTPUT_BUCKET: <name of the output object storage bucket where the transcoded files will be uploaded>
+  OUTPUT_BUCKET: <name of the output object storage bucket where the transcoded files will be stored>
   STREAMING_PROTOCOL: <HLS or DASH>
   SUBNET_ID: <subnet OCID>
 ```
