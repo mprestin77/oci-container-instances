@@ -102,3 +102,24 @@ fn deploy --app process-new-file
 In OCI Console create an [Event Rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm#top) that fires when a new file is uploaded to the object storage bucket. Here is an example of the event rule:
 
 ![Screen Shot 2023-08-15 at 4 27 55 PM](https://github.com/mprestin77/oci-container-instances/assets/54962742/e8f826ee-4b0e-4509-a9cf-6f8b8d48d91b)
+
+Input bucket must be an existing object storage bucket where the input media files are uploaded. 
+
+# Test the Flow
+
+Upload a new file to the input bucket. Shortly after that you should see that OCI event new-file-upload is emitted
+
+![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fd39e420-6e9e-4a07-aac0-46d4ad0a2b96)
+
+and it triffers function execution
+
+![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/676cf74f-c537-4895-ac17-253aa9b366ea)
+
+
+![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/fec57c25-481b-4b41-87c0-42f2940046e1)
+
+
+
+
+
+
