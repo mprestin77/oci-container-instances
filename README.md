@@ -114,7 +114,7 @@ It triggers execution of "create-container-instance" function that you can see i
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/676cf74f-c537-4895-ac17-253aa9b366ea)
 
-This function spins up a new "transcode" container instance on the configured container instance shape:
+This function spins up a new "transcode" container instance using the configured container instance shape:
 
 ![image](https://github.com/mprestin77/oci-container-instances/assets/54962742/c578d67b-bf62-4fc3-b222-294277effc3d)
 
